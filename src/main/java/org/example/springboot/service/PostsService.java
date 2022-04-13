@@ -1,6 +1,10 @@
 package org.example.springboot.service;
 
+import java.util.stream.Collectors;
+import java.util.List;
+
 import org.example.springboot.domain.posts.*; // 이렇게 입력하니까 Test 무난히 통과
+import org.example.springboot.web.dto.*;
 
 import org.example.springboot.web.dto.PostsResponseDto;
 import org.example.springboot.web.dto.PostsUpdateRequestDto;
@@ -43,6 +47,23 @@ public class PostsService {
                                       .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id = " + id));
 
         return new PostsResponseDto(entity);
+
+    }
+
+    @Transactional(readOnly = true)
+    public List<PostsListResponseDto> findAllDesc() {
+        return postsRepository.findAllDesc().stream()
+                .map(PostsListResponseDto::new)
+                .collect(Collectors.toList());
+    }
+
+    @Transactional
+    public void delete(Long id){
+
+        Posts posts = postsRepository.findById(id)
+                                     .orElseThrow(() -> new IllegalArgumentException("해당 게시글이 없습니다. id=" + id));
+
+        postsRepository.delete(posts);
 
     }
 
