@@ -2,7 +2,9 @@
 
 - [Eclipse Workspace와 IntelliJ Project](http://bit.ly/2orXeGl)
 
-- [TDD](https://repo.yona.io/doortts/blog/issue/1])
+- [TDD](https://repo.yona.io/doortts/blog/issue/1)
+
+- [TDD 관련 강의 - 백명석 님](http://bit.ly/2xtKinX)
 
 - [assertj의 장점](http://bit.ly/30vm9Lg)
 
