@@ -1,0 +1,26 @@
+language: java
+jdk:
+  - openjdk8
+
+# CI를 어느 브랜치에 push 할 지 지정
+branches:
+  only:
+    - master
+
+# 그레이들을 통해 의존성을 받을 때 해당 디렉토리에 캐시
+# 같은 의존성은 다음 배포때 부터 다시 받지 않도록 설정됨
+cache:
+  directories:
+    - '$HOME/.m2/repository'
+    - '$HOME/.gradle'
+
+# master 브랜치에 푸시되었을 때 수행하는 명령어
+
+script: "./gradlew clean build"
+
+# CI 실행 완료시 메일로 알림
+notifications:
+  email:
+    recipents:
+      - "ixdos1111@naver.com"
+
