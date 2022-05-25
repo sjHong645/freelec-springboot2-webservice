@@ -16,3 +16,6 @@
 
 - [JPA에 대한 자세한 내용](https://www.aladin.co.kr/shop/wproduct.aspx?ItemId=62681446)
 
+## Github actions를 이용한 배포 
+
+[출처](https://stalker5217.netlify.app/devops/github-action-aws-ci-cd-1/)
