@@ -59,4 +59,4 @@ jobs:
         aws s3 cp \ 
           --region ap-northeast-2 \ 
           --acl private \ 
-          ./springboot-intro-build.zip s3://hong-build
+          s3://hong-build ./springboot-intro-build.zip
