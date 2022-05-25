@@ -59,4 +59,4 @@ jobs:
         aws s3 cp \ 
           --region ap-northeast-2 \ 
           --acl private \ 
-          s3://hong-build/freelec-springboot-deploy ./springboot-intro-build.zip
+         ./springboot-intro-build.zip s3://hong-build/
