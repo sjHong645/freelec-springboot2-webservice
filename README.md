@@ -19,3 +19,6 @@
 ## Github actions를 이용한 CI/CD 구축
 
 [출처](https://stalker5217.netlify.app/devops/github-action-aws-ci-cd-1/)
+
+
+## 현재 도전 과제 : appspec.yml 파일 수정해서 배포 성공하기 => github actions에서는 되는데 정작 aws의 s3에서는 실패한다.
